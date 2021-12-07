@@ -7,6 +7,13 @@
   "author": "Ted Boudros <tedboudros@gmail.com>",
   "license": "GNUv3",
   "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start-dev-server": "nodemon server.js",
+    "start-react-server": "rm -rf dist || webpack --mode=development",
+    "start-react-server-win": "rmdir /s /q dist || webpack --mode development",
+    "dev-win": "concurrently --kill-others-on-fail \"yarn run start-dev-server\" \"yarn run start-react-server-win\""
+  },
   "dependencies": {
     "express": "^4.17.1",
     "react": "^17.0.2",
@@ -17,10 +24,12 @@
     "@babel/core": "^7.16.0",
     "@babel/preset-react": "^7.16.0",
     "babel-loader": "^8.2.3",
+    "concurrently": "^6.4.0",
     "css-loader": "^6.5.1",
     "html-loader": "^3.0.1",
     "html-webpack-plugin": "^5.5.0",
     "nodemon": "^2.0.15",
+    "sass": "^1.44.0",
     "sass-loader": "^12.4.0",
     "style-loader": "^3.3.1",
     "webpack": "^5.65.0",
