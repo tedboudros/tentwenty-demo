@@ -1,0 +1,10 @@
+{
+  "name": "tentwenty-demo",
+  "version": "1.0.0",
+  "description": "tentwenty demo",
+  "main": "index.js",
+  "repository": "https://github.com/tedboudros/tentwenty-demo.git",
+  "author": "Ted Boudros <theodore.boudros.design@gmail.com>",
+  "license": "GNUv3",
+  "private": true
+}
