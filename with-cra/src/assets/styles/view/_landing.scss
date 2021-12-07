@@ -1,0 +1,51 @@
+.landing {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+
+  background-image: url(../../images/landing-bg.png);
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+
+  &__bottom_container {
+    position: absolute;
+    left: $spacing-left-bottom;
+    bottom: $spacing-left-bottom;
+    max-width: 30.75rem;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+
+    color: $white;
+    text-transform: capitalize;
+  }
+
+  &__heading {
+    font-size: 1.25rem;
+    line-height: 2.375rem;
+    font-family: $cormorant;
+    font-weight: $font-weight-semibold;
+    animation: slide-up-opacity 0.8s ease-in-out forwards;
+  }
+
+  &__title {
+    font-size: 3.75rem;
+    line-height: 4.25rem;
+    font-weight: $font-weight-light;
+    animation: slide-up-opacity 0.6s ease-in-out forwards;
+  }
+}
+
+@keyframes slide-up-opacity {
+  0% {
+    opacity: 0;
+    transform: scale(0.98) translateY(20%);
+  }
+  100% {
+    opacity: 1;
+    transform: initial;
+  }
+}

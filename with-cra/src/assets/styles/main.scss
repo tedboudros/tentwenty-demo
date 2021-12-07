@@ -1,14 +1,11 @@
-body {
-  margin: 0;
-  font-family: "Poppins", sans-serif;
-}
-
 // Abstracts:
 @import "abstracts/variables";
+@import "abstracts/misc";
 
 // Components:
 @import "components/button";
 @import "components/input";
+@import "components/page-header";
 
 // View:
-@import "view/header";
+@import "view/landing";
