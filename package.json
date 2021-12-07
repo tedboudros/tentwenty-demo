@@ -4,7 +4,18 @@
   "description": "tentwenty demo",
   "main": "index.js",
   "repository": "https://github.com/tedboudros/tentwenty-demo.git",
-  "author": "Ted Boudros <theodore.boudros.design@gmail.com>",
+  "author": "Ted Boudros <tedboudros@gmail.com>",
   "license": "GNUv3",
-  "private": true
+  "private": true,
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^6.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/preset-react": "^7.16.0",
+    "webpack": "^5.65.0",
+    "webpack-cli": "^4.9.1"
+  }
 }
