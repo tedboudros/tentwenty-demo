@@ -5,7 +5,7 @@
   padding: $size4 $size12; // 4px 12px
   height: fit-content;
   width: fit-content;
-  transition: $base-transition;
+  transition: $interactive-transition;
   cursor: pointer;
 
   &:hover {

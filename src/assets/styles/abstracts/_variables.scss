@@ -11,9 +11,11 @@ $poppins: "Poppins", sans-serif;
 $cormorant: "Cormorant", serif;
 
 $font-weight-light: 300;
+$font-weight-normal: 400;
 $font-weight-semibold: 600;
 
-$base-transition: 0.3s ease-in-out;
+$interactive-transition: 0.3s ease-in-out;
+$animation-transition: 1s cubic-bezier(0.73, 0.24, 0.74, 0.89);
 
 $size4: 0.25rem;
 $size8: 0.5rem;

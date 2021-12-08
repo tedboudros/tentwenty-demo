@@ -3,19 +3,21 @@
     //fallback to 24px:
     margin-right: $size24;
     cursor: pointer;
-    transition: $base-transition;
+    transition: $interactive-transition;
     color: inherit;
     text-decoration: inherit;
+    border-bottom: 1px solid transparent;
 
     &:hover {
       opacity: 1 !important;
+      border-bottom: 1px solid $white;
     }
   }
 
   &.hovering {
     a {
       opacity: 0.3;
-      transition: $base-transition;
+      transition: $interactive-transition;
     }
   }
 }

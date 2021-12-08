@@ -1,8 +1,8 @@
 import { useEffect, useState, useCallback } from "react";
 import useDebounce from "./useDebounce";
 
-const useIsInViewport = (ref) => {
-  const [isInViewport, setIsInViewport] = useState(false);
+const useIsInViewport = (ref, partiallyInViewport = true) => {
+  const [isInViewport, setIsInViewport] = useState(true);
   const debounce = useDebounce();
 
   const isElementInViewport = (el) => {
@@ -10,10 +10,10 @@ const useIsInViewport = (ref) => {
 
     return (
       rect.top >= 0 &&
-      rect.left + rect.width >= 0 &&
+      rect.left + (partiallyInViewport ? rect.width : 0) >= 0 &&
       rect.bottom <=
         (window.innerHeight || document.documentElement.clientHeight) &&
-      rect.right - rect.width <=
+      rect.right - (partiallyInViewport ? rect.width : 0) <=
         (window.innerWidth || document.documentElement.clientWidth)
     );
   };

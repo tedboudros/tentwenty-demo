@@ -8,4 +8,54 @@
     left: $size28;
     top: $size40 + $size80;
   }
+
+  &__text-container {
+    top: 40%;
+    position: absolute;
+    z-index: 1;
+  }
+
+  &__title {
+    color: $white;
+    display: block;
+    font-family: $cormorant;
+    font-size: $size160;
+    width: fit-content;
+    font-style: normal;
+    font-weight: $font-weight-normal;
+    transform: translateX(47%);
+    transition: $animation-transition;
+
+    &.hidden {
+      transform: translateX(0);
+    }
+
+    &--bottom {
+      width: fit-content;
+      transition: $animation-transition;
+      transform: translateX(-14.5%);
+
+      &.hidden {
+        transform: translateX(47%);
+      }
+    }
+  }
+}
+
+@keyframes move-to-right {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(47%);
+  }
+}
+
+@keyframes move-to-right-reverse {
+  0% {
+    transform: translateX(47%);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
