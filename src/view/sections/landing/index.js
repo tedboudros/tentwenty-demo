@@ -1,7 +1,5 @@
 import React from "react";
 
-import landingBg from "assets/images/landing-bg.png";
-
 const Landing = () => {
   return (
     <div className="landing">

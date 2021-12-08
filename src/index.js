@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import "assets/styles/main.scss";
+import "./assets/styles/main.scss";
 import Home from "./view";
 
 ReactDOM.render(

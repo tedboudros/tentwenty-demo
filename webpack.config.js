@@ -3,6 +3,7 @@ const webpack = require("webpack");
 const HTMLWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
+  mode: "development",
   entry: "./src/index.js",
   output: {
     filename: "bundle.js",
@@ -15,6 +16,20 @@ module.exports = {
       root: __dirname,
       src: path.resolve(__dirname, "src"),
     },
+  },
+  devServer: {
+    static: {
+      directory: path.join(__dirname, "public"),
+    },
+    client: {
+      progress: true,
+      overlay: {
+        errors: true,
+        warnings: false,
+      },
+    },
+    compress: true,
+    port: 3000,
   },
   module: {
     rules: [
@@ -34,17 +49,6 @@ module.exports = {
       {
         test: /\.scss$/,
         use: ["style-loader", "css-loader", "sass-loader"],
-      },
-      {
-        test: /\.(png|jpg|gif)$/i,
-        use: [
-          {
-            loader: "url-loader",
-            options: {
-              limit: 8192,
-            },
-          },
-        ],
       },
     ],
   },
