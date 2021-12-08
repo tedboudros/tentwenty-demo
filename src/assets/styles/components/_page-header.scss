@@ -1,0 +1,54 @@
+.page-header {
+  background: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 1;
+  color: $white;
+  padding: $size40 $size64 0 $size80;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+
+  &__left {
+    display: flex;
+
+    &__logo {
+      background-image: url(../images/logo.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      height: $size28;
+      width: $size80;
+      filter: invert(1);
+    }
+
+    & a {
+      //fallback to 24px:
+      margin-right: $size24;
+
+      &:nth-of-type(1) {
+        margin-left: $size160;
+        margin-right: $size36;
+      }
+      &:nth-of-type(2) {
+        margin-right: $size26;
+      }
+      &:nth-of-type(3) {
+        margin-right: $size30;
+      }
+    }
+  }
+
+  &__right {
+    & a {
+      &:nth-of-type(1) {
+        margin-left: $size24;
+      }
+      &:nth-of-type(2) {
+        margin-left: $size34;
+      }
+    }
+  }
+}

@@ -10,8 +10,8 @@
 
   &__bottom_container {
     position: absolute;
-    left: $spacing-left-bottom;
-    bottom: $spacing-left-bottom;
+    left: $size80;
+    bottom: $size80;
     max-width: 30.75rem;
 
     display: flex;
@@ -24,16 +24,16 @@
   }
 
   &__heading {
-    font-size: 1.25rem;
-    line-height: 2.375rem;
+    font-size: $size20;
+    line-height: $size38;
     font-family: $cormorant;
     font-weight: $font-weight-semibold;
     animation: slide-up-opacity 0.8s ease-in-out forwards;
   }
 
   &__title {
-    font-size: 3.75rem;
-    line-height: 4.25rem;
+    font-size: $size60;
+    line-height: $size68;
     font-weight: $font-weight-light;
     animation: slide-up-opacity 0.6s ease-in-out forwards;
   }
