@@ -1,0 +1,21 @@
+.button-input {
+  height: $size32;
+  width: $size32;
+  border-radius: 50%;
+  border: 1px solid $white;
+  cursor: pointer;
+  transition: $base-transition;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background: $white;
+    color: $black;
+  }
+  &:active {
+    transition: 0s;
+    background: transparent;
+    color: $white;
+  }
+}

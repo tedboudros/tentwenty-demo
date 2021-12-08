@@ -4,6 +4,8 @@
     margin-right: $size24;
     cursor: pointer;
     transition: $base-transition;
+    color: inherit;
+    text-decoration: inherit;
 
     &:hover {
       opacity: 1 !important;
