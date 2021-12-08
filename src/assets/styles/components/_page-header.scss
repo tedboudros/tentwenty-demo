@@ -11,6 +11,24 @@
   justify-content: space-between;
   box-sizing: border-box;
 
+  &__links {
+    a {
+      cursor: pointer;
+      transition: $base-transition;
+
+      &:hover {
+        opacity: 1 !important;
+      }
+    }
+
+    &.hovering {
+      a {
+        opacity: 0.3;
+        transition: $base-transition;
+      }
+    }
+  }
+
   &__left {
     display: flex;
 
@@ -44,10 +62,10 @@
   &__right {
     & a {
       &:nth-of-type(1) {
-        margin-left: $size24;
+        margin-right: $size24;
       }
       &:nth-of-type(2) {
-        margin-left: $size34;
+        margin-right: $size34;
       }
     }
   }

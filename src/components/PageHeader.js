@@ -1,11 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "./Button";
 
 const PageHeaderLinks = ({ config }) => {
+  const [isHovering, setIsHovering] = useState(false);
+
+  const onMouseEnter = () => setIsHovering(true);
+
+  const onMouseLeave = () => setIsHovering(false);
+
   return (
-    <div className="page-header__links">
+    <div className={`page-header__links${isHovering ? " hovering" : ""}`}>
       {(config || []).map((link, index) => (
-        <a>{link.text}</a>
+        <a onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+          {link.text}
+        </a>
       ))}
     </div>
   );
