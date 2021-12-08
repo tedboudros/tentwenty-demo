@@ -35,6 +35,17 @@
 
     color: $white;
     text-transform: capitalize;
+
+    &.hidden {
+      .landing {
+        &__heading {
+          animation: hide-down 0.8s ease-in-out forwards;
+        }
+        &__title {
+          animation: hide-down 0.6s ease-in-out forwards;
+        }
+      }
+    }
   }
 
   &__heading {
@@ -42,18 +53,18 @@
     line-height: $size38;
     font-family: $cormorant;
     font-weight: $font-weight-semibold;
-    animation: slide-up-opacity 0.8s ease-in-out forwards;
+    animation: show-up 0.8s ease-in-out forwards;
   }
 
   &__title {
     font-size: $size60;
     line-height: $size68;
     font-weight: $font-weight-light;
-    animation: slide-up-opacity 0.6s ease-in-out forwards;
+    animation: show-up 0.6s ease-in-out forwards;
   }
 }
 
-@keyframes slide-up-opacity {
+@keyframes show-up {
   0% {
     opacity: 0;
     transform: scale(0.98) translateY(20%);
@@ -61,5 +72,16 @@
   100% {
     opacity: 1;
     transform: initial;
+  }
+}
+
+@keyframes hide-down {
+  0% {
+    opacity: 1;
+    transform: initial;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.98) translateY(20%);
   }
 }
