@@ -5,12 +5,20 @@ import ScrollingText from "./ScrollingText";
 
 import BackgroundSVG from "../../../assets/svg/success-stories-bg.svg";
 import PortraitIMG from "../../../assets/images/success-stories-portrait.png";
+import TopHeading from "./TopHeading";
 
 const SuccessStoriesSection = () => {
   return (
     <section className="success-stories">
       <BackgroundSVG className="success-stories__bg" />
-      <Image src={PortraitIMG} />
+      <TopHeading />
+      <div className="success-stories__portrait-container">
+        <Image
+          effect="rotating"
+          src={PortraitIMG}
+          className="success-stories__portrait"
+        />
+      </div>
       <ScrollingText />
     </section>
   );

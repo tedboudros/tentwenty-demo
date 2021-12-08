@@ -2,12 +2,14 @@
 @import "abstracts/variables";
 @import "abstracts/misc";
 @import "abstracts/helpers";
+@import "abstracts/animations";
 @import "abstracts/horizontal-scroll";
 
 // Components:
 @import "components/button";
 @import "components/button-input";
 @import "components/links";
+@import "components/image";
 
 // View:
 @import "view/sections/landing";

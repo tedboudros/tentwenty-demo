@@ -18,9 +18,9 @@ const Image = ({ effect, className, ...rest }) => {
   return (
     <img
       ref={imageRef}
-      className={`image ${
-        !isInViewport ? "hidden" : ""
-      } ${className} ${getEffectClassName(effect)}`}
+      className={`image ${!isInViewport ? "hidden" : ""} ${
+        className || ""
+      } ${getEffectClassName(effect)}`}
       {...rest}
     />
   );

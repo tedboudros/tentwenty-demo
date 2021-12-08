@@ -1,9 +1,12 @@
 .image {
-  transition: $interactive-transition;
+  transition: $animation-transition;
 
   &--rotating {
+    transform: rotate(7.5deg);
+    opacity: 1;
+
     &.hidden {
-      transform: rotate(0deg);
+      transform: rotate(2deg);
     }
   }
 }

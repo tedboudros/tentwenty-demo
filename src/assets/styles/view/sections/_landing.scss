@@ -39,10 +39,10 @@
     &.hidden {
       .landing {
         &__heading {
-          animation: hide-down 0.8s ease-in-out forwards;
+          animation: hide-down $slow-text-animation-transition;
         }
         &__title {
-          animation: hide-down 0.6s ease-in-out forwards;
+          animation: hide-down $text-animation-transition;
         }
       }
     }
@@ -53,35 +53,13 @@
     line-height: $size38;
     font-family: $cormorant;
     font-weight: $font-weight-semibold;
-    animation: show-up 0.8s ease-in-out forwards;
+    animation: show-up $slow-text-animation-transition;
   }
 
   &__title {
     font-size: $size60;
     line-height: $size68;
     font-weight: $font-weight-light;
-    animation: show-up 0.6s ease-in-out forwards;
-  }
-}
-
-@keyframes show-up {
-  0% {
-    opacity: 0;
-    transform: scale(0.98) translateY(20%);
-  }
-  100% {
-    opacity: 1;
-    transform: initial;
-  }
-}
-
-@keyframes hide-down {
-  0% {
-    opacity: 1;
-    transform: initial;
-  }
-  100% {
-    opacity: 0;
-    transform: scale(0.98) translateY(20%);
+    animation: show-up $text-animation-transition;
   }
 }

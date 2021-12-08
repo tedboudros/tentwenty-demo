@@ -1,0 +1,43 @@
+@keyframes show-up {
+  0% {
+    opacity: 0;
+    transform: scale(0.98) translateY(20%);
+  }
+  100% {
+    opacity: 1;
+    transform: initial;
+  }
+}
+
+@keyframes hide-down {
+  0% {
+    opacity: 1;
+    transform: initial;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.98) translateY(20%);
+  }
+}
+
+@keyframes show-down {
+  0% {
+    opacity: 0;
+    transform: scale(0.98) translateY(-20%);
+  }
+  100% {
+    opacity: 1;
+    transform: initial;
+  }
+}
+
+@keyframes hide-up {
+  0% {
+    opacity: 1;
+    transform: initial;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.98) translateY(-20%);
+  }
+}
