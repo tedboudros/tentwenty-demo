@@ -8,6 +8,20 @@
   background-position: center;
   overflow: hidden;
 
+  &::after {
+    // this is the backdrop on the header
+    content: "";
+    display: block;
+    height: $size344;
+    width: 100vw;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.4) 0%,
+      rgba(0, 0, 0, 0) 100%
+    );
+    z-index: 2;
+  }
+
   &__bottom_container {
     position: absolute;
     left: $size80;

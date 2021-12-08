@@ -1,7 +1,10 @@
-import React, { useRef, memo } from "react";
+import React, { useRef, useMemo } from "react";
 
-import PageHeader from "../components/PageHeader";
-import Landing from "./sections/landing";
+import PageHeader from "./components/PageHeader";
+
+import LandingSection from "./sections/landing";
+import BusinessSection from "./sections/business";
+import SuccessStoriesSection from "./sections/success-stories";
 
 import useSmoothHorizontalScrollRef from "../hooks/useSmoothHorizontalScrollRef";
 
@@ -18,29 +21,25 @@ const headerRightSideConfig = [
   { text: "Careers", url: "/careers" },
 ];
 
-const HomeInner = memo(() => {
-  console.log("this is rendering");
-
-  return (
-    <>
-      <Landing />
-    </>
-  );
-});
-
 const Home = () => {
-  const horizontalScroll = useSmoothHorizontalScrollRef();
+  const containerRef = useRef();
+  useSmoothHorizontalScrollRef(containerRef);
 
-  return (
-    <div>
-      <PageHeader
-        leftSideConfig={headerLeftSideConfig}
-        rightSideConfig={headerRightSideConfig}
-      />
-      <div className="scroll-wrapper" {...horizontalScroll}>
-        <HomeInner />
+  return useMemo(
+    () => (
+      <div>
+        <PageHeader
+          leftSideConfig={headerLeftSideConfig}
+          rightSideConfig={headerRightSideConfig}
+        />
+        <div className="scroll-wrapper" ref={containerRef}>
+          <LandingSection />
+          <BusinessSection />
+          <SuccessStoriesSection />
+        </div>
       </div>
-    </div>
+    ),
+    []
   );
 };
 

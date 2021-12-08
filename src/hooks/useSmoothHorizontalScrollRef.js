@@ -1,40 +1,32 @@
-import { useRef, useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback } from "react";
 
-const useSmoothHorizontalScrollRef = (transitionTime = 400) => {
-  const ref = useRef();
+const MULTIPLIER = 1.3;
 
+const useSmoothHorizontalScrollRef = (ref) => {
   const [transformLeft, setTransformLeft] = useState(0);
 
-  const doScroll = useCallback(
-    (delta) => {
-      const newLeft = transformLeft + delta;
-      setTransformLeft(newLeft >= 0 ? 0 : newLeft);
+  const containerWidth = ref.current?.clientWidth - screen.width;
+
+  const handleScroll = useCallback(
+    (e) => {
+      // TODO: Add touch and horizontal scroll support. Now we calculate only using deltaY
+      let newLeft = transformLeft - e.deltaY * MULTIPLIER;
+      if (newLeft > 0) newLeft = 0;
+      if (-newLeft > containerWidth) newLeft = -containerWidth;
+
+      setTransformLeft(newLeft);
+      if (ref.current) ref.current.style.transform = `translateX(${newLeft}px)`;
     },
     [transformLeft]
   );
 
-  const handleScroll = (e) => {
-    doScroll(e.deltaY);
-  };
-
-  console.log(`translateX(${transformLeft}px)`);
-
   useEffect(() => {
-    // TODO: Add touch and horizontal scroll support. Now we calculate only using deltaY
-    if (ref.current) ref.current.addEventListener("wheel", handleScroll);
+    window.addEventListener("wheel", handleScroll);
 
     return () => {
-      if (ref.current) ref.current.removeEventListener("wheel", handleScroll);
+      window.removeEventListener("wheel", handleScroll);
     };
-  }, [ref, transformLeft]);
-
-  return {
-    ref,
-    style: {
-      transform: `translateX(${transformLeft}px)`,
-      transition: `${transitionTime}ms ease-in-out`,
-    },
-  };
+  }, [transformLeft]);
 };
 
 export default useSmoothHorizontalScrollRef;

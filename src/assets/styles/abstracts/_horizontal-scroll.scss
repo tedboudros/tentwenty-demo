@@ -1,0 +1,6 @@
+.scroll-wrapper {
+  transition: transform 0.4s cubic-bezier(0.22, 0.91, 0.58, 0.92);
+  display: flex;
+  min-width: fit-content;
+  overflow: hidden;
+}

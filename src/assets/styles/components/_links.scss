@@ -1,0 +1,21 @@
+.links {
+  pointer-events: all;
+
+  a {
+    //fallback to 24px:
+    margin-right: $size24;
+    cursor: pointer;
+    transition: $base-transition;
+
+    &:hover {
+      opacity: 1 !important;
+    }
+  }
+
+  &.hovering {
+    a {
+      opacity: 0.3;
+      transition: $base-transition;
+    }
+  }
+}

@@ -1,16 +1,16 @@
 import React from "react";
 
-const Landing = () => {
+const LandingSection = () => {
   return (
-    <div className="landing">
+    <section className="landing">
       <div className="landing__bottom_container">
         <span className="landing__heading">If not now, then when?</span>
         <span className="landing__title">
           Time to make your wealth work for you
         </span>
       </div>
-    </div>
+    </section>
   );
 };
 
-export default Landing;
+export default LandingSection;
