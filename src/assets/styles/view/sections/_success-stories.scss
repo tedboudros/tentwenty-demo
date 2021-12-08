@@ -1,3 +1,11 @@
 .success-stories {
   background: $bg-dark;
+  position: relative;
+
+  &__bg {
+    color: $secondary-dark;
+    position: absolute;
+    left: $size28;
+    top: $size40 + $size80;
+  }
 }

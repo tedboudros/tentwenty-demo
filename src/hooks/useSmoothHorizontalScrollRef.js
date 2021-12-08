@@ -5,12 +5,14 @@ const MULTIPLIER = 1.3;
 const useSmoothHorizontalScrollRef = (ref) => {
   const [transformLeft, setTransformLeft] = useState(0);
 
-  const containerWidth = ref.current?.clientWidth - screen.width;
-
   const handleScroll = useCallback(
     (e) => {
+      const containerWidth =
+        ref.current?.clientWidth -
+        (window.innerWidth || document.documentElement.clientWidth);
+
       // TODO: Add touch and horizontal scroll support. Now we calculate only using deltaY
-      let newLeft = transformLeft - e.deltaY * MULTIPLIER;
+      let newLeft = transformLeft - (e.deltaY || 0) * MULTIPLIER;
       if (newLeft > 0) newLeft = 0;
       if (-newLeft > containerWidth) newLeft = -containerWidth;
 
@@ -22,9 +24,11 @@ const useSmoothHorizontalScrollRef = (ref) => {
 
   useEffect(() => {
     window.addEventListener("wheel", handleScroll);
+    window.addEventListener("resize", handleScroll);
 
     return () => {
       window.removeEventListener("wheel", handleScroll);
+      window.removeEventListener("resize", handleScroll);
     };
   }, [transformLeft]);
 };
