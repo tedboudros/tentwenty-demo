@@ -3,4 +3,19 @@
   line-height: $size24;
   border: 1px solid $white;
   padding: $size4 $size12; // 4px 12px
+  height: fit-content;
+  width: fit-content;
+  transition: $base-transition;
+  cursor: pointer;
+
+  &:hover {
+    background: $white;
+    color: $black;
+    border-radius: 3px;
+  }
+  &:active {
+    transition: 0s;
+    background: transparent;
+    color: $white;
+  }
 }

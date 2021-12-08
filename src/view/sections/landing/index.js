@@ -6,8 +6,6 @@ const LandingSection = () => {
   const textRef = useRef();
   const isInViewport = useIsInViewport(textRef);
 
-  console.log(isInViewport);
-
   return (
     <section className="landing">
       <div

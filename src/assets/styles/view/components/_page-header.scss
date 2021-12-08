@@ -7,13 +7,13 @@
   color: $white;
   padding: $size40 $size64 0 $size80;
   display: flex;
+  align-items: center;
   justify-content: space-between;
   box-sizing: border-box;
-  height: $size344;
-  pointer-events: none;
 
   &__left {
     display: flex;
+    align-items: center;
 
     &__logo {
       background-image: url(../images/logo.png);
@@ -40,6 +40,9 @@
   }
 
   &__right {
+    display: flex;
+    align-items: center;
+
     & a {
       &:nth-of-type(1) {
         margin-right: $size24;
