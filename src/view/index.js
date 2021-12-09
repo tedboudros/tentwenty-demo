@@ -9,16 +9,20 @@ import SuccessStoriesSection from "./sections/success-stories";
 import useSmoothHorizontalScrollRef from "../hooks/useSmoothHorizontalScrollRef";
 
 const Home = () => {
+  const lightAreaRef = useRef();
+
   const containerRef = useRef();
   useSmoothHorizontalScrollRef(containerRef);
 
   return useMemo(
     () => (
       <div>
-        <PageHeader />
+        <PageHeader lightAreaRef={lightAreaRef} />
         <div className="scroll-wrapper" ref={containerRef}>
           <LandingSection />
-          <BusinessSection />
+          <div ref={lightAreaRef}>
+            <BusinessSection />
+          </div>
           <SuccessStoriesSection />
         </div>
       </div>

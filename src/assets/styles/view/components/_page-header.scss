@@ -11,11 +11,29 @@
   justify-content: space-between;
   box-sizing: border-box;
 
+  .dark {
+    color: $black;
+
+    .button,
+    .button-input {
+      border: 1px solid $black;
+    }
+
+    .page-header__left__logo {
+      filter: none;
+    }
+
+    a {
+      color: $black;
+    }
+  }
+
   &__left {
     display: flex;
     align-items: center;
 
     &__logo {
+      transition: $interactive-transition;
       background-image: url(../images/logo.png);
       background-size: contain;
       background-repeat: no-repeat;

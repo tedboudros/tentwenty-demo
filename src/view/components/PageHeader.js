@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 
 import ButtonInput from "../../components/ButtonInput";
 import Button from "../../components/Button";
@@ -7,15 +7,36 @@ import Links from "../../components/Links";
 import SearchSvg from "../../assets/svg/search.svg";
 
 import { leftSideConfig, rightSideConfig } from "../../helpers/menu-links";
+import useIsOverlapping from "../../hooks/useIsOverlapping";
 
-const PageHeader = () => {
+const PageHeader = ({ lightAreaRef }) => {
+  const leftSideRef = useRef();
+  const rightSideRef = useRef();
+
+  const isLeftSideOverlapping = useIsOverlapping(
+    leftSideRef,
+    lightAreaRef,
+    true
+  );
+  const isRightSideOverlapping = useIsOverlapping(
+    rightSideRef,
+    lightAreaRef,
+    true
+  );
+
   return (
     <div className="page-header">
-      <div className="page-header__left">
+      <div
+        ref={leftSideRef}
+        className={`page-header__left ${isLeftSideOverlapping ? "dark" : ""}`}
+      >
         <div className="page-header__left__logo" />
         <Links config={leftSideConfig} />
       </div>
-      <div className="page-header__right">
+      <div
+        ref={rightSideRef}
+        className={`page-header__right ${isRightSideOverlapping ? "dark" : ""}`}
+      >
         <Links config={rightSideConfig} />
         <ButtonInput>
           <SearchSvg width={14} height={14} />

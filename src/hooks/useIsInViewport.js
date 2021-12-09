@@ -6,7 +6,7 @@ const useIsInViewport = (ref, partiallyInViewport = true) => {
   const debounce = useDebounce();
 
   const isElementInViewport = (el) => {
-    var rect = el.getBoundingClientRect();
+    const rect = el.getBoundingClientRect();
 
     return (
       rect.top >= 0 &&
