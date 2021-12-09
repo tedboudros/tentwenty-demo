@@ -1,8 +1,13 @@
 import { useCallback, useEffect, useState } from "react";
 import useDebounce from "./useDebounce";
 
-const useIsOverlapping = (firstElementRef, secondElementRef, isFullyInside) => {
-  const [isOverlapping, setIsOverlapping] = useState(true);
+const useIsOverlapping = (
+  firstElementRef,
+  secondElementRef,
+  isFullyInside,
+  initialOverlapping = true
+) => {
+  const [isOverlapping, setIsOverlapping] = useState(initialOverlapping);
   const debounce = useDebounce();
 
   const areElementsOverlapping = (el1, el2) => {

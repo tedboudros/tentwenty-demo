@@ -13,8 +13,7 @@ module.exports = {
   resolve: {
     extensions: [".js", ".jsx"],
     alias: {
-      root: __dirname,
-      src: path.resolve(__dirname, "src"),
+      _: [path.resolve(__dirname, "src")],
     },
   },
   devServer: {

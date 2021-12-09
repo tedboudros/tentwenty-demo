@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 
-const MULTIPLIER = 1.3;
+const MULTIPLIER = 1.5;
 
 const useSmoothHorizontalScrollRef = (ref) => {
   const [transformLeft, setTransformLeft] = useState(0);

@@ -1,3 +1,23 @@
 .business {
   background: $bg-light;
+  position: relative;
+
+  &__img {
+    &--left {
+      position: absolute;
+      left: -$size98;
+      top: $size344;
+      z-index: 2;
+    }
+    &--center {
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+    }
+    &--right {
+      position: absolute;
+      top: $size344;
+      right: $size36;
+    }
+  }
 }

@@ -42,10 +42,10 @@
     &.hidden {
       .landing {
         &__heading {
-          animation: hide-down $slow-text-animation-transition;
+          animation: hide-down $keyframes-transition;
         }
         &__title {
-          animation: hide-down $text-animation-transition;
+          animation: hide-down $short-keyframes-transition;
         }
       }
     }
@@ -56,13 +56,13 @@
     line-height: $size38;
     font-family: $cormorant;
     font-weight: $font-weight-semibold;
-    animation: show-up $slow-text-animation-transition;
+    animation: show-up $keyframes-transition;
   }
 
   &__title {
     font-size: $size60;
     line-height: $size68;
     font-weight: $font-weight-light;
-    animation: show-up $text-animation-transition;
+    animation: show-up $short-keyframes-transition;
   }
 }

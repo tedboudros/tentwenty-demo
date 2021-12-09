@@ -3,10 +3,18 @@
 
   &--rotating {
     transform: rotate(7.5deg);
-    opacity: 1;
 
     &.hidden {
       transform: rotate(2deg);
+    }
+  }
+
+  &--smooth-pop-in {
+    animation: popup-show $short-keyframes-transition;
+    opacity: 1;
+
+    &.hidden {
+      animation: popup-hide $short-keyframes-transition;
     }
   }
 }

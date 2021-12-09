@@ -16,12 +16,14 @@ const PageHeader = ({ lightAreaRef }) => {
   const isLeftSideOverlapping = useIsOverlapping(
     leftSideRef,
     lightAreaRef,
-    true
+    true,
+    false
   );
   const isRightSideOverlapping = useIsOverlapping(
     rightSideRef,
     lightAreaRef,
-    true
+    true,
+    false
   );
 
   return (

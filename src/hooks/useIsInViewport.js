@@ -1,8 +1,12 @@
 import { useEffect, useState, useCallback } from "react";
 import useDebounce from "./useDebounce";
 
-const useIsInViewport = (ref, partiallyInViewport = true) => {
-  const [isInViewport, setIsInViewport] = useState(true);
+const useIsInViewport = (
+  ref,
+  partiallyInViewport = true,
+  startHidden = false
+) => {
+  const [isInViewport, setIsInViewport] = useState(!startHidden);
   const debounce = useDebounce();
 
   const isElementInViewport = (el) => {
