@@ -1,21 +1,60 @@
 .business {
   background: $bg-light;
+  max-height: 100vh;
   position: relative;
 
+  &__inner-container {
+    position: relative;
+    min-width: 100vw;
+    max-height: 100vh;
+  }
+
+  &__side-bg {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+
+    &__img {
+      max-height: 100vh;
+    }
+
+    .business__bg-text {
+      color: $white !important;
+    }
+  }
+
+  &__bg-text {
+    position: absolute;
+    display: block;
+    font-size: $size480;
+    line-height: $size480;
+    bottom: $size180;
+    font-weight: $font-weight-light;
+    right: $size104;
+    color: $black;
+  }
+
+  &__title {
+    font-size: $size40;
+    line-height: $size48;
+    position: absolute;
+    top: $size148;
+    left: $size520;
+  }
+
   &__img {
+    z-index: 2;
+    position: absolute;
+
     &--left {
-      position: absolute;
       left: -$size98;
       top: $size344;
-      z-index: 2;
     }
     &--center {
-      position: absolute;
-      left: 50%;
+      right: $size310;
       bottom: 0;
     }
     &--right {
-      position: absolute;
       top: $size344;
       right: $size36;
     }

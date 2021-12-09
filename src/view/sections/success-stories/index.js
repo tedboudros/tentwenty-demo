@@ -17,6 +17,7 @@ const SuccessStoriesSection = () => {
           <Image
             effect="rotating"
             src={PortraitIMG}
+            fullyVisible
             className="success-stories__portrait"
           />
         </div>

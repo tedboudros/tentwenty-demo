@@ -1,0 +1,19 @@
+.animated-text {
+  transition: $short-animation-transition;
+
+  &--fade-up {
+    animation: fade-in-up $keyframes-transition;
+
+    &.hidden {
+      animation: fade-out-up $keyframes-transition;
+    }
+  }
+
+  &--fade-down {
+    animation: fade-in-down $keyframes-transition;
+
+    &.hidden {
+      animation: fade-out-down $keyframes-transition;
+    }
+  }
+}

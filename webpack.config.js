@@ -13,6 +13,7 @@ module.exports = {
   resolve: {
     extensions: [".js", ".jsx"],
     alias: {
+      // TODO: Debug absolute paths (not working currently)
       _: [path.resolve(__dirname, "src")],
     },
   },

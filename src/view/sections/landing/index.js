@@ -1,24 +1,18 @@
 import React, { useRef } from "react";
 
-import useIsInViewport from "../../../hooks/useIsInViewport";
+import AnimatedText from "../../../components/AnimatedText";
 
 const LandingSection = () => {
-  const textRef = useRef();
-  const isInViewport = useIsInViewport(textRef);
-
   return (
     <section className="landing">
       <div className="safe-area">
-        <div
-          className={`landing__bottom_container${
-            !isInViewport ? " hidden" : ""
-          }`}
-          ref={textRef}
-        >
-          <span className="landing__heading">If not now, then when?</span>
-          <span className="landing__title">
+        <div className="landing__bottom_container">
+          <AnimatedText effect="fade-up" className="landing__heading">
+            If not now, then when?
+          </AnimatedText>
+          <AnimatedText effect="fade-up" className="landing__title">
             Time to make your wealth work for you
-          </span>
+          </AnimatedText>
         </div>
       </div>
     </section>

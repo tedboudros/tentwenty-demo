@@ -30,7 +30,7 @@ const useIsInViewport = (
     }
   }, [isInViewport]);
 
-  const onVisibilityChangeDebounced = debounce(onVisibilityChange, 100);
+  const onVisibilityChangeDebounced = debounce(onVisibilityChange, 200);
 
   useEffect(() => {
     window.addEventListener("load", onVisibilityChangeDebounced, false);

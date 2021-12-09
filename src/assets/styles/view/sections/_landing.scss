@@ -38,17 +38,6 @@
 
     color: $white;
     text-transform: capitalize;
-
-    &.hidden {
-      .landing {
-        &__heading {
-          animation: hide-down $keyframes-transition;
-        }
-        &__title {
-          animation: hide-down $short-keyframes-transition;
-        }
-      }
-    }
   }
 
   &__heading {
@@ -56,13 +45,11 @@
     line-height: $size38;
     font-family: $cormorant;
     font-weight: $font-weight-semibold;
-    animation: show-up $keyframes-transition;
   }
 
   &__title {
     font-size: $size60;
     line-height: $size68;
     font-weight: $font-weight-light;
-    animation: show-up $short-keyframes-transition;
   }
 }

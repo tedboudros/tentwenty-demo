@@ -1,2 +1,8 @@
 # tentwenty-demo
-Challenge for tentwenty
+
+## Run instructions:
+
+- `yarn install`
+- `yarn start`
+
+---

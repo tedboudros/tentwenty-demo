@@ -48,18 +48,18 @@
     margin-bottom: $size52;
     color: $white;
 
-    animation: show-down $short-keyframes-transition;
+    animation: fade-in-down $short-keyframes-transition;
 
     &.hidden {
-      animation: hide-up $short-keyframes-transition;
+      animation: fade-out-down $short-keyframes-transition;
     }
   }
 
   &__links {
-    animation: show-down $keyframes-transition;
+    animation: fade-in-down $keyframes-transition;
 
     &.hidden {
-      animation: hide-up $keyframes-transition;
+      animation: fade-out-down $keyframes-transition;
     }
   }
 
