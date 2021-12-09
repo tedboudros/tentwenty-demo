@@ -11,6 +11,9 @@
   &::after {
     // this is the backdrop on the header
     content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
     display: block;
     height: $size344;
     width: 100vw;
@@ -26,7 +29,7 @@
     position: absolute;
     left: $size80;
     bottom: $size80;
-    max-width: 30.75rem;
+    width: $size492;
 
     display: flex;
     align-items: flex-start;

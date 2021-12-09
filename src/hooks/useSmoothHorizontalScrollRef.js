@@ -23,10 +23,12 @@ const useSmoothHorizontalScrollRef = (ref) => {
   );
 
   useEffect(() => {
+    window.addEventListener("load", handleScroll);
     window.addEventListener("wheel", handleScroll);
     window.addEventListener("resize", handleScroll);
 
     return () => {
+      window.removeEventListener("load", handleScroll);
       window.removeEventListener("wheel", handleScroll);
       window.removeEventListener("resize", handleScroll);
     };

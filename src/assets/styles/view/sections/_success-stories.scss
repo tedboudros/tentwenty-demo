@@ -1,27 +1,35 @@
 .success-stories {
   background: $bg-dark;
   position: relative;
+  overflow: hidden;
 
   &__bg {
     color: $secondary-dark;
     position: absolute;
     left: $size28;
-    top: $size40 + $size80;
+    top: $size32;
   }
 
   &__text-container {
-    top: 40%;
+    top: $size328;
     position: absolute;
     z-index: 1;
   }
 
   &__portrait-container {
-    display: block;
     position: absolute;
-    top: 60%;
+    top: $size230;
     left: 50%;
     z-index: 2;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
+  }
+
+  &__top-container {
+    top: $size102;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    z-index: 3;
   }
 
   &__heading {
@@ -31,11 +39,22 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    margin-bottom: $size52;
     color: $white;
-    animation: show-down 0.8s ease-in-out forwards;
+
+    animation: show-down $text-animation-transition;
 
     &.hidden {
-      animation: hide-up 0.8s ease-in-out forwards;
+      animation: hide-up $text-animation-transition;
+    }
+  }
+
+  &__links {
+    animation: show-down $slow-text-animation-transition;
+
+    &.hidden {
+      animation: hide-up $slow-text-animation-transition;
     }
   }
 
@@ -44,42 +63,29 @@
     display: block;
     font-family: $cormorant;
     font-size: $size160;
+    line-height: $size160 + $size8;
     width: fit-content;
     font-style: normal;
     font-weight: $font-weight-normal;
-    transform: translateX(47%);
+    transform: translateX(45%);
     transition: $animation-transition;
+    opacity: 1;
 
     &.hidden {
       transform: translateX(0);
+      opacity: 0;
     }
 
     &--bottom {
       width: fit-content;
       transition: $animation-transition;
+      opacity: 1;
+      margin-top: $size18;
       transform: translateX(-14.5%);
 
       &.hidden {
-        transform: translateX(47%);
+        transform: translateX(45%);
       }
     }
-  }
-}
-
-@keyframes move-to-right {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(47%);
-  }
-}
-
-@keyframes move-to-right-reverse {
-  0% {
-    transform: translateX(47%);
-  }
-  to {
-    transform: translateX(0);
   }
 }

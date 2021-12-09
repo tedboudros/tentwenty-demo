@@ -8,14 +8,18 @@ const LandingSection = () => {
 
   return (
     <section className="landing">
-      <div
-        className={`landing__bottom_container${!isInViewport ? " hidden" : ""}`}
-        ref={textRef}
-      >
-        <span className="landing__heading">If not now, then when?</span>
-        <span className="landing__title">
-          Time to make your wealth work for you
-        </span>
+      <div className="safe-area">
+        <div
+          className={`landing__bottom_container${
+            !isInViewport ? " hidden" : ""
+          }`}
+          ref={textRef}
+        >
+          <span className="landing__heading">If not now, then when?</span>
+          <span className="landing__title">
+            Time to make your wealth work for you
+          </span>
+        </div>
       </div>
     </section>
   );

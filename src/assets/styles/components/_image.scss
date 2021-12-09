@@ -1,5 +1,5 @@
 .image {
-  transition: $animation-transition;
+  transition: $short-animation-transition;
 
   &--rotating {
     transform: rotate(7.5deg);

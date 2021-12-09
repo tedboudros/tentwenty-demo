@@ -1,4 +1,6 @@
 .links {
+  color: $white;
+
   a {
     //fallback to 24px:
     margin-right: $size24;
@@ -7,6 +9,8 @@
     color: inherit;
     text-decoration: inherit;
     border-bottom: 1px solid transparent;
+    font-size: $size14;
+    line-height: $size19;
 
     &:hover {
       opacity: 1 !important;

@@ -6,7 +6,9 @@ import Links from "../../components/Links";
 
 import SearchSvg from "../../assets/svg/search.svg";
 
-const PageHeader = ({ leftSideConfig, rightSideConfig }) => {
+import { leftSideConfig, rightSideConfig } from "../../helpers/menu-links";
+
+const PageHeader = () => {
   return (
     <div className="page-header">
       <div className="page-header__left">

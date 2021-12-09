@@ -10,16 +10,18 @@ import TopHeading from "./TopHeading";
 const SuccessStoriesSection = () => {
   return (
     <section className="success-stories">
-      <BackgroundSVG className="success-stories__bg" />
-      <TopHeading />
-      <div className="success-stories__portrait-container">
-        <Image
-          effect="rotating"
-          src={PortraitIMG}
-          className="success-stories__portrait"
-        />
+      <div className="safe-area">
+        <BackgroundSVG className="success-stories__bg" />
+        <TopHeading />
+        <div className="success-stories__portrait-container">
+          <Image
+            effect="rotating"
+            src={PortraitIMG}
+            className="success-stories__portrait"
+          />
+        </div>
+        <ScrollingText />
       </div>
-      <ScrollingText />
     </section>
   );
 };

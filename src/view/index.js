@@ -8,19 +8,6 @@ import SuccessStoriesSection from "./sections/success-stories";
 
 import useSmoothHorizontalScrollRef from "../hooks/useSmoothHorizontalScrollRef";
 
-// the urls don't lead anywhere :(
-const headerLeftSideConfig = [
-  { text: "Private clients", url: "/private-clients" },
-  { text: "Corporates", url: "/corporates" },
-  { text: "Insights", url: "/insights" },
-  { text: "Contact", url: "/contact" },
-];
-
-const headerRightSideConfig = [
-  { text: "About", url: "/about" },
-  { text: "Careers", url: "/careers" },
-];
-
 const Home = () => {
   const containerRef = useRef();
   useSmoothHorizontalScrollRef(containerRef);
@@ -28,10 +15,7 @@ const Home = () => {
   return useMemo(
     () => (
       <div>
-        <PageHeader
-          leftSideConfig={headerLeftSideConfig}
-          rightSideConfig={headerRightSideConfig}
-        />
+        <PageHeader />
         <div className="scroll-wrapper" ref={containerRef}>
           <LandingSection />
           <BusinessSection />

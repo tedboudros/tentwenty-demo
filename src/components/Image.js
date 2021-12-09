@@ -13,7 +13,7 @@ const getEffectClassName = (effect) => {
 
 const Image = ({ effect, className, ...rest }) => {
   const imageRef = useRef();
-  const isInViewport = useIsInViewport(imageRef, false);
+  const isInViewport = useIsInViewport(imageRef);
 
   return (
     <img
