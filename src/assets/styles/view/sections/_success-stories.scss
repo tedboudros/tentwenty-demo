@@ -8,12 +8,55 @@
     position: absolute;
     left: $size28;
     top: $size32;
+    z-index: 0;
   }
 
   &__text-container {
     top: $size328;
     position: absolute;
     z-index: 1;
+  }
+
+  &__bottom-section {
+    position: absolute;
+    bottom: $size76;
+    left: 50%;
+    transform: translateX(-50%);
+
+    &__text {
+      color: $white;
+      font-size: $size30;
+      line-height: $size38;
+      font-size: $font-weight-light;
+      position: relative;
+    }
+
+    .button {
+      position: absolute;
+      left: -$size104;
+      transform: translate(-100%, -50%);
+      top: $size20;
+      border-radius: 50%;
+      background: $secondary-light;
+      height: $size120;
+      width: $size120;
+      text-align: center;
+      font-weight: $font-weight-light;
+      font-size: $size16;
+      line-height: $size22;
+      display: flex;
+      align-items: center;
+      color: $white;
+      box-sizing: border-box;
+      border: 0;
+
+      &:hover {
+        background: $white;
+        color: $secondary-light;
+        transition: 0.3s cubic-bezier(0.16, 1.19, 0.75, 1.52);
+        transform: translate(-100%, -50%) scale(1.1);
+      }
+    }
   }
 
   &__portrait-container {

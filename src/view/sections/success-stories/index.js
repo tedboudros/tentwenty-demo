@@ -6,6 +6,7 @@ import ScrollingText from "./ScrollingText";
 import BackgroundSVG from "../../../assets/svg/success-stories-bg.svg";
 import PortraitIMG from "../../../assets/images/success-stories-portrait.png";
 import TopHeading from "./TopHeading";
+import BottomSection from "./BottomSection";
 
 const SuccessStoriesSection = () => {
   return (
@@ -21,6 +22,7 @@ const SuccessStoriesSection = () => {
             className="success-stories__portrait"
           />
         </div>
+        <BottomSection />
         <ScrollingText />
       </div>
     </section>
